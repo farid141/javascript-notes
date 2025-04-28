@@ -1,0 +1,6 @@
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+  new Intl.DateTimeFormat('en-GB', {
+    dateStyle: 'full',
+    timeStyle: 'long',
+    timeZone: 'Australia/Sydney',
+  }).format(date)
