@@ -26,22 +26,22 @@ arr.length
 
 ## Modifikasi array
 
-- `arr.push('asd')` => menambahkan data ke posisi akhir **`mutate`**
-- `arr.unshift('asd')` => menambahkan data ke posisi awal **`mutate`**
-- `arr.pop()` => menghapus data terakhir dan mengembalikan data tersebut **`mutate`**
-- `arr.shift()` => menghapus data pertama dan mengembalikan data tsb **`mutate`**
-- `arr.concat(array2, array3)` => uraikan array dan gabung
-- `arr.slice(start, end)` => mengambil array dari index start sampai sebelum end
-- `arr.splice(i_start, i_remove, add...)` => menghapus element setelah start dan menambahkan element lain (params 3, 4, ...) `mutate`
-- `arr.toSpliced(i_start, i_remove, add...)` => menghapus element setelah start dan menambahkan element lain (params 3, 4, ...)
-- `arr.includes(search_item)` => return boolean item ada/tidak di array
+- `arr.push('asd')` => modifikasi tambahkan data ke posisi akhir
+- `arr.unshift('asd')` => modifikasi tambahkan data ke posisi awal
+- `arr.pop()` => modifikasi hapus data terakhir dan kembalikan data tersebut
+- `arr.shift()` => modifikasi hapus data pertama dan kembalikan data tsb
+- `arr.concat(array2, array3)` => buat array baru, uraikan array argument 1 level dan gabung
+- `arr.slice(start, end)` => buat baru, mengambil array dari index start sampai sebelum end
+- `arr.splice(i_start, i_remove, add...)` => modifikasi, hapus element setelah start dan menambahkan element lain (params 3, 4, ...)
+- `arr.toSpliced(i_start, i_remove, add...)` => buat baru, hapus element setelah start dan menambahkan element lain (params 3, 4, ...)
+- `arr.includes(search_item)` => return boolean, `true` jika salah satu element sama dengan item
 
 ### find element
 
-- `arr.find(callback)` mengambalikan nilai pertama yang memenuhi callback function (start from first index)
-- `arr.findLast(callback)`
-- `arr.findIndex(callback)`
-- `arr.findLastIndex(callback)`
+- `arr.find(callback)` kembalikan nilai pertama yang menghasilkan callback true (index awal ke akhir)
+- `arr.findLast(callback)` kembalikan nilai pertama yang menghasilkan callback true (index akhir ke awal)
+- `arr.findIndex(callback)` kembalikan index pertama yang menghasilkan callback true (index awal ke akhir)
+- `arr.findLastIndex(callback)` kembalikan index pertama yang menghasilkan callback true (index akhir ke awal)
 
 ## Sort
 
@@ -56,7 +56,7 @@ arr.reverse(); // mutate
 arr.toReverse(); // no mutate
 ```
 
-### sort number
+### sort array of number
 
 ```js
 const arr = [40, 100, 1, 5, 25, 10];
