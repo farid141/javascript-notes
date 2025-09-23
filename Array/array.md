@@ -73,3 +73,38 @@ sort number tersebut dapat digunakan untuk menentukan min/max, dengan mengambil 
 - `arr.map(callback)` return array baru dengan element bernilai hasil callback
 - `arr.flatMap(callback)` return array baru dengan element bernilai `flat 1 level` hasil callback
 - `arr.some(callback)` return true/false apabila ada satu element yang memenuhi callback
+
+## Grouping list of Obj
+
+```js
+const data = [
+  { category: 'fruit', name: 'apple' },
+  { category: 'fruit', name: 'banana' },
+  { category: 'vegetable', name: 'carrot' },
+  { category: 'vegetable', name: 'broccoli' }
+];
+
+// 1. arr.Reduce Approach
+const grouped = data.reduce((acc, item) => {
+  const key = item.category;
+  if (!acc[key]) {
+    acc[key] = [];
+  }
+  acc[key].push(item);
+  return acc;
+}, {});
+
+// 2. Modern Approach (ECMA Script 2023)
+const grouped = Object.groupBy(data, item => item.category);
+
+// 3. manual with arr.forEach approach
+const grouped = {};
+data.forEach(item => {
+  const key = item.category;
+  if (!grouped[key]) {
+    grouped[key] = [];
+  }
+  grouped[key].push(item);
+});
+
+```
