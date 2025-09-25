@@ -30,5 +30,22 @@ const [firstName, lastName, ...others] = person
  name, 
  address:{name, country}, 
  contact
- }
+}
 ```
+
+### Custom Variable Name
+
+Dengan array, kita bisa melakukannya secara default, berbeda dengan obj.
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30,
+  occupation: 'Software Engineer'
+};
+
+// Destructuring and renaming 'name' to 'fullName', and 'occupation' to 'jobTitle'
+const { name: fullName, age, occupation: jobTitle } = person;
+```
+
+Dari code diatas, bagian sebelah kanan `:` adalah variable custom.
